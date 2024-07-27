@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Formulario de creación'}) %>
+<%- include('../partials/head', {title: 'Formulario de creación'}) %>
 <body>
 	<!-- Header -->
-	<%- include('partials/headerNavbar') %>
+	<%- include('../partials/headerNavbar') %>
 	<!-- /Header -->
 
 	<div class="container products-wrapper">
@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="col-12">
-			<form action="/crear-producto/" method="post" enctype="multipart/form-data">
+			<form action="/admin/crear-producto/" method="post" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
@@ -37,14 +37,14 @@
 						</select>
 					</div>
 					<div class="col-12">
-						<label for="description" class="form-label">Descipción:</label>
+						<label for="description" class="form-label">Descripción:</label>
 						<textarea name="description" id="description" class="form-input"></textarea>
 					</div>
 
-					
-						<div class="">
-						  <label for="exampleFormControlFile1">Seleccionar Archivo</label>
-						  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+					<div class="input-group mb-3 col-12">
+						<div class="custom-file col-6">
+							<label class="form-label d-flex" for="img">Imagen:</label>
+						    <input name="img" type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
 						</div>
 					  
 					<div class="col-12">
@@ -58,7 +58,7 @@
 	<!-- /todos los productos -->
 
 	<!-- footer -->
-	<%- include('partials/footer') %>
+	<%- include('../partials/footer') %>
 	<!-- /footer -->
 </body>	
 </html>

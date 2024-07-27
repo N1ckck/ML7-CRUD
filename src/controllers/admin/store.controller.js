@@ -1,9 +1,5 @@
-
 const { loadData, saveData } = require('../../data')
-const {validationResult}=requiere("express-validator")
-module.exports = (req, res) => {
-    const errors=validationResult
-    
+module.exports = (req, res) => {    
     const { name, price, discount, description, category } = req.body;
     const image = req.file
 

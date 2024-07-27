@@ -3,12 +3,12 @@ const {loadData}=require("../../data")
 module.exports=(req,res)=>{
     const products=loadData()
 
-    const productInSale=products.filter(p=>p.category ==="in-sale")
-    const producsVisited=products.filter(p=>p.category ==="visited")
+    const productsInSale=products.filter(p=>p.category ==="in-sale")
+    const productsVisited=products.filter(p=>p.category ==="visited")
 
     res.render("other/home",{
-        productInSale,
-        producsVisited,
+        productsInSale,
+        productsVisited,
         toThousand
     })
     
